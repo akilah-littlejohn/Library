@@ -1,5 +1,5 @@
 export class Book {
 
-    constructor(public title: string, public author: string, public pagesgit : number) {}
+    constructor(public title: string, public author: string, public pages : number) {}
 
 }
