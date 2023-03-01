@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Book } from './book';
 
 @Injectable({
   providedIn: 'root'
@@ -6,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class LibraryService {
   books:[] = []
 
-  constructor() { }
+  constructor(public bookType:Book) { }
 
   addBook(){
 
