@@ -6,18 +6,32 @@ import { BookDetails } from './book-details';
   providedIn: 'root'
 })
 export class LibraryService {
-  books:Book[] = []
+  books: Book[] = []
+  booksId: number = 0
 
   constructor(public bookType: Book) { }
 
-  addBook(val:BookDetails):void {
-    const bookInfo = new Book(val.author, val.title, val.pages)
+  addBook(val: BookDetails): void {
+    val.id = this.booksId++
+    const bookInfo = new Book(val.id, val.author, val.title, val.pages)
     this.books.push(bookInfo)
   }
 
-  updateBook() { }
+  deleteBook(val: BookDetails) {
+    const index = this.books.findIndex(b => b.id === val.id);
+    if (index !== -1) {
+      this.books.splice(index, 1)
+    }
+  }
+  updateBook(val: BookDetails) {
 
-  deleteBook() { }
+    const index = this.books.findIndex(b => b.id === val.id);
+    if (index !== -1) {
+      this.books[index] = val;
 
-  clearLibrary() { }
+    }
+
+  }
+
+ 
 }
