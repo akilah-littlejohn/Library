@@ -14,6 +14,13 @@
       </tr>
     </thead>
     <tbody>
+      <tr *ngFor="let books of book | async">
+        <td>{{ books.id }}. {{ books.title }}</td>
+        <td>{{ books.author }}</td>
+        <td>{{ books.pages }}</td>
+        <td><i class="fas fa-minus-circle"></i></td>
+
+      </tr>
     </tbody>
   </table>
 </section>

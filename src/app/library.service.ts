@@ -1,37 +1,32 @@
 import { Injectable } from '@angular/core';
-import { Book } from './book';
 import { BookDetails } from './book-details';
+
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LibraryService {
-  books: Book[] = []
+  api: string = 'http://localhost:3000/books'
   booksId: number = 0
 
-  constructor(public bookType: Book) { }
+  constructor( private http: HttpClient) { }
+
+  getBook() {
+    return this.http.get<BookDetails[]>(this.api)
+   }
 
   addBook(val: BookDetails): void {
-    val.id = this.booksId++
-    const bookInfo = new Book(val.id, val.author, val.title, val.pages)
-    this.books.push(bookInfo)
   }
 
   deleteBook(val: BookDetails) {
-    const index = this.books.findIndex(b => b.id === val.id);
-    if (index !== -1) {
-      this.books.splice(index, 1)
-    }
+
   }
   updateBook(val: BookDetails) {
 
-    const index = this.books.findIndex(b => b.id === val.id);
-    if (index !== -1) {
-      this.books[index] = val;
-
-    }
-
   }
 
- 
+
 }
+
+
