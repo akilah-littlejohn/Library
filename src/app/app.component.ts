@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { BookFormComponent } from './book-form/book-form.component';
 import { TableComponent } from './table/table.component';
 
 @Component({
@@ -7,7 +8,7 @@ import { TableComponent } from './table/table.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone:true,
-  imports:[TableComponent, CommonModule]
+  imports:[TableComponent, BookFormComponent ,CommonModule]
 })
 export class AppComponent {
   title = 'book-list';
