@@ -1,0 +1,7 @@
+<section class="card" style="width: 18rem;">
+    <article class="card-body" *ngFor="let books of books$ | async" >
+      <h5 class="card-title">{{books.title}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">books.Author</h6>
+      <p class="card-text">books.title</p>
+    </article>
+</section>

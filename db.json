@@ -4,13 +4,15 @@
       "id": 1,
       "title": "Maximum-Achievement",
       "author": "Brian Tracy",
-      "pages":"300"
+      "pages":"300",
+      "details":"The step-by-step blueprint for success and achievement presented in these pages includes proven principles drawn from psychology, religion, philosophy, business, economics, politics, history, and metaphysics. These ideas are combined in a fast-moving, informative series of steps that will lead you to greater success than you ever imagined possible -- they can raise your self-esteem, improve personal performance, and give you complete control over every aspect of your personal and professional life."
     },
     {
       "id": 2,
       "title": "Six Pillars OF Self Esteem",
       "author": "Nathaniel Branden",
-      "pages":"600"
+      "pages":"600",
+      "details":"The Six Pillars of Self-Esteem is a psychology book written by Dr. Nathaniel Branden. The book describes what Branden believes are the key elements that raise or lower the self-esteem of an individual."
     }
 
   ]
