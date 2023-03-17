@@ -9,7 +9,7 @@ import { TableComponent } from './table/table.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   standalone:true,
-  imports:[TableComponent, BookFormComponent ,BookDetailCardComponent,CommonModule]
+  imports:[TableComponent, BookFormComponent ,BookDetailCardComponent,CommonModule ]
 })
 export class AppComponent {
   title = 'book-list';

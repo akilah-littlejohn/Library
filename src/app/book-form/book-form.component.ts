@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 
 @Component({
   selector: 'app-book-form',
@@ -9,5 +11,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./book-form.component.scss']
 })
 export class BookFormComponent {
-
+constructor(public activeModal:NgbActiveModal){}
 }

@@ -14,12 +14,13 @@ export class LibraryService {
   constructor(private http: HttpClient) { }
 
   getBook() {
+    
     return this.http.get<BookDetails[]>(this.api)
   }
 
   addBook(book: BookDetails): void {
-
-    this.http.post<BookDetails>(this.api, book)
+  
+    this.http.post<BookDetails>(this.api, book.id)
   }
 
 

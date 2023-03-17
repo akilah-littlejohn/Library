@@ -14,7 +14,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let books of book | async">
+      <tr *ngFor="let books of booklist$ | async">
         <td>{{ books.id }}. {{ books.title }}</td>
         <td>{{ books.author }}</td>
         <td>{{ books.pages }}</td>
@@ -27,8 +27,8 @@
 
 </section>
 <section class="d-flex justify-content-center">
-  <button class="btn btn-dark ">
-    <i class="fas fa-book-open"></i>
+  <button class="btn btn-dark " (click)="open()">
+    <i class="fas fa-book-open" ></i>
     Add Book
   </button>
 </section>
