@@ -16,12 +16,14 @@ import { BookFormComponent } from '../book-form/book-form.component';
 })
 export class TableComponent implements OnInit{
   booklist$?:Observable<BookDetails[]>
+  bookCollection:[] = [];
 
   constructor(public library: LibraryService, private ngbModal:NgbModal){
     
   }
 ngOnInit(): void {
 this.booklist$ = this.library.getBook()
+
 }
 open() {
   const modalRef = this.ngbModal.open(BookFormComponent)
